@@ -1,3 +1,9 @@
+# revision 23779
+# category Package
+# catalog-ctan /macros/latex/contrib/gitinfo
+# catalog-date 2011-09-01 15:37:23 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0
 Name:		texlive-gitinfo
 Version:	1.0
 Release:	1
@@ -44,6 +50,7 @@ the metadata.
 %doc %{_texmfdistdir}/doc/latex/gitinfo/gitinfo.pdf
 %doc %{_texmfdistdir}/doc/latex/gitinfo/gitinfo.tex
 %doc %{_texmfdistdir}/doc/latex/gitinfo/post-xxx-sample.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ the metadata.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
