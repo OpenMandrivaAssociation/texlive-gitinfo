@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-gitinfo
 Version:	1.0
-Release:	1
+Release:	2
 Summary:	Access metadata from the git distributed version control system
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo
