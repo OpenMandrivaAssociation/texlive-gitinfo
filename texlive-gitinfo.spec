@@ -1,12 +1,12 @@
-# revision 23779
+# revision 34049
 # category Package
 # catalog-ctan /macros/latex/contrib/gitinfo
-# catalog-date 2011-09-01 15:37:23 +0200
+# catalog-date 2014-05-15 00:10:33 +0200
 # catalog-license lppl1.3
 # catalog-version 1.0
 Name:		texlive-gitinfo
 Version:	1.0
-Release:	7
+Release:	8
 Summary:	Access metadata from the git distributed version control system
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo
@@ -20,9 +20,10 @@ Requires(post):	texlive-kpathsea
 
 %description
 The package makes it possible to incorporate git version
-control metadata into documents. For memoir users, the package
-provides the means to tailor page headers and footers to use
-the metadata.
+control metadata into documents. Note this version is now
+deprecated, but is kept on the archive, pro tem, for continuity
+for existing users. For memoir users, the package provides the
+means to tailor page headers and footers to use the metadata.
 
 %post
     %{_sbindir}/texlive.post
