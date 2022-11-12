@@ -1,18 +1,12 @@
-# revision 34049
-# category Package
-# catalog-ctan /macros/latex/contrib/gitinfo
-# catalog-date 2014-05-15 00:10:33 +0200
-# catalog-license lppl1.3
-# catalog-version 1.0
 Name:		texlive-gitinfo
-Version:	1.0
-Release:	12
+Version:	34049
+Release:	1
 Summary:	Access metadata from the git distributed version control system
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gitinfo
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gitinfo.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gitinfo.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gitinfo.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gitinfo.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ for existing users. For memoir users, the package provides the
 means to tailor page headers and footers to use the metadata.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,7 +39,7 @@ means to tailor page headers and footers to use the metadata.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
